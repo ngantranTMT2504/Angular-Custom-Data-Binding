@@ -33,10 +33,16 @@ export class ProductsComponent implements OnInit {
   }
 
 
-  ProductRadioButtonSelection:string = 'All'
+  ProductRadioButtonSelection:string = 'All';
+  searchText:string ='';
 
   onRadioButtonSelectionChange(data:string) {
     this.ProductRadioButtonSelection = data
     console.log(this.ProductRadioButtonSelection)
+  }
+  
+  searchValueChange(searchValue: string) {
+    this.searchText = searchValue
+    console.log(this.searchText)
   }
 }
